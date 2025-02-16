@@ -1,0 +1,24 @@
+{
+  "name": "field-research",
+  "version": "1.0.0",
+  "description": "A Digital Garden powered by Quartz 4.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericslyfield/field-research.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ericslyfield/field-research/issues"
+  },
+  "homepage": "https://github.com/ericslyfield/field-research#readme",
+  "dependencies": {
+    "quartz": "^0.0.1"
+  }
+}
