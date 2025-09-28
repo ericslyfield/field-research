@@ -20,6 +20,10 @@
 # Configuration
 wp-config.php
 
+# Node Modules
+wp-content/themes/*/node_modules/
+node_modules/
+
 # Example themes
 /wp-content/themes/twenty*/
 
