@@ -1,0 +1,106 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+        "blocks": {
+            "core/image" :{
+                "lightbox": {
+                    "enabled": true,
+                    "allowEditing": true
+                }
+            },
+            "core/cover" :{
+                "lightbox": {
+                    "enabled": false,
+                    "allowEditing": false
+                }
+            }
+        },
+        "border": {
+            "color" :true,
+            "radius": true,
+            "style": true,
+            "width": true
+        },
+        "color": {
+            "link": true,
+            "caption": true,
+            "background": true,
+            "custom": true,
+            "customGradient": false,
+            "defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+            "palette": [
+                {
+                    "color": "#ffffff",
+                    "name": "Base",
+                    "slug": "base"
+                },
+                {
+                    "color": "#000000",
+                    "name": "Contrast",
+                    "slug": "contrast"
+                },
+                {
+                    "color": "#144611",
+                    "name": "Primary",
+                    "slug": "primary"
+                }
+            ]
+	},
+    "layout": {
+        "contentSize": "55rem",
+        "wideSize": "80rem"
+    },
+    "spacing": {
+        "customSpacingSize": false
+    },
+    "typography": {
+        "customFontSize": false,
+        "fontWeight": false,
+        "textColumns": true,
+        "fontFamilies": [
+        {
+          "name": "Shippori Antique B1",
+          "slug": "shippori-antique-b-1",
+          "fontFamily": "\"Shippori Antique B1\", sans-serif",
+          "fontFace": [
+            {
+              "src": [
+                "file:./assets/fonts/shippori-antique-b1/shippori-antique-b1-400-normal.woff2"
+              ],
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontFamily": "\"Shippori Antique B1\""
+            }
+          ]
+        },
+        {
+          "name": "PT Serif",
+          "slug": "pt-serif",
+          "fontFamily": "\"PT Serif\", serif",
+          "fontFace": [
+            {
+              "src": [
+                "file:./assets/fonts/pt-serif/pt-serif-400-normal.woff2"
+              ],
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontFamily": "\"PT Serif\""
+            },
+            {
+              "src": [
+                "file:./assets/fonts/pt-serif/pt-serif-400-italic.woff2"
+              ],
+              "fontWeight": "400",
+              "fontStyle": "italic",
+              "fontFamily": "\"PT Serif\""
+            }
+          ]
+        }
+    ]
+}
+}
+}
