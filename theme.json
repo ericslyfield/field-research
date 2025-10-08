@@ -61,10 +61,12 @@
         "customFontSize": false,
         "fontWeight": false,
         "textColumns": true,
+        "writingMode": true,
+        "fluid": false,
         "fontFamilies": [
         {
           "name": "Shippori Antique B1",
-          "slug": "shippori-antique-b-1",
+          "slug": "shippori-antique-b1",
           "fontFamily": "\"Shippori Antique B1\", sans-serif",
           "fontFace": [
             {
@@ -100,6 +102,28 @@
             }
           ]
         }
+    ],
+    "fontSizes": [
+        {
+					"name": "Small",
+					"slug": "small",
+					"size": "13px"
+				},
+				{
+					"name": "Medium",
+					"slug": "medium",
+					"size": "20px"
+				},
+				{
+					"name": "Large",
+					"slug": "large",
+					"size": "36px"
+				},
+				{
+					"name": "Extra Large",
+					"slug": "x-large",
+					"size": "42px"
+				}
     ]
 }
 }
