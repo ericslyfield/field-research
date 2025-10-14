@@ -6,7 +6,9 @@
   "scripts": {
     "build": "wp-scripts build",
     "start": "wp-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "sass --watch assets/scss/main.scss:assets/css/style.css --style=compressed",
+    "build:sass": "sass assets/scss/main.scss:assets/css/style.css --style=compressed"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/ericslyfield/field-research#readme",
   "devDependencies": {
-    "@wordpress/scripts": "^30.24.0"
+    "@wordpress/scripts": "^30.24.0",
+    "sass": "^1.93.2"
   }
 }

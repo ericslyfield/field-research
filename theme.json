@@ -61,6 +61,7 @@
         "customFontSize": false,
         "fontWeight": false,
         "textColumns": true,
+        "textDecoration": true,
         "writingMode": true,
         "fluid": false,
         "fontFamilies": [
