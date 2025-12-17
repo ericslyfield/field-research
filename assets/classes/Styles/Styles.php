@@ -28,24 +28,44 @@ class Styles {
 
     protected function register_and_enqueue_styles() {
         $this->register_style( 
-            'fieldresearch-main', 
+            'fieldresearch-styles', 
             '/assets/css/style.css'
         );
 
-    wp_enqueue_style( 'fieldresearch-main' );
+    wp_enqueue_style( 'fieldresearch-styles' );
     }
 
     protected function register_and_enqueue_scripts() {
         wp_enqueue_script( 'jquery' );
-        
+
+
+        // Global Scripts
         $this->register_script( 
             'fieldresearch-scripts', 
             '/assets/js/scripts.js',
             [ 'jquery' ],
             true
         );
+
+        // Image Carousel
+        $this->register_script( 
+            'fieldresearch-carousel', 
+            '/assets/js/image-carousel.js',
+            [ 'jquery' ],
+        true
+        );
+
+        // Global Scripts
+        $this->register_script( 
+            'fieldresearch-observer', 
+            '/assets/js/observer.js',
+            [ 'jquery' ],
+            true
+        );
         
     wp_enqueue_script( 'fieldresearch-scripts' );
+    wp_enqueue_script( 'fieldresearch-carousel' );
+    wp_enqueue_script( 'fieldresearch-observer' );
     }
     private function register_style( $handle, $path ) {
         $url = get_template_directory_uri() . $path;

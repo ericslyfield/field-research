@@ -1,7 +1,7 @@
-@forward 'blend-mode.scss';
-@forward 'variables.scss';
-@forward 'links.scss';
-
-a{
-    color: aqua;
-}
+@forward 'abstracts';
+@forward 'base';
+@forward 'components';
+@forward 'layout';
+@forward 'pages';
+@forward 'utilities';
+@forward 'vendors';

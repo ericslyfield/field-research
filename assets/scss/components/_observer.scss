@@ -1,0 +1,14 @@
+  /* Initial state for the translate-up elements */
+  
+  .translate-up {
+    opacity: 0;                    /* Start as invisible */
+    transform: translateY(50px);    /* Start 50px below final position */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;  /* Smooth transitions */
+    // will-change: opacity, transform; /* Optimize performance */
+  }
+  
+  /* When the element enters the viewport and becomes visible */
+  .translate-up.visible {
+    opacity: 1;                     /* Fully visible */
+    transform: translateY(0);        /* Move to final position */
+  }

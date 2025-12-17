@@ -47,6 +47,21 @@
                     "color": "#144611",
                     "name": "Primary",
                     "slug": "primary"
+                },
+                {
+                    "color": "#faf6ed",
+                    "name": "Sand",
+                    "slug": "sand"
+                },
+                {
+                    "color": "#333333",
+                    "name": "Slate",
+                    "slug": "slate"
+                },
+                {
+                    "color": "#467061",
+                    "name": "Pine",
+                    "slug": "pine"
                 }
             ]
 	},
