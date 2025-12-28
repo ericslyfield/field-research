@@ -1,7 +1,6 @@
 .grid-container {
   display: grid;
   gap: 1.5rem;
-  width: 85vw;
   padding: 2rem;
   margin: 1rem;
 
@@ -13,15 +12,30 @@
       grid-column: span 4;
       order: 2;
     }
+
+    .blog-column-1 {
+      grid-column: span 4;
+      order: 2;
+    }
     
     .column-2 {
       grid-column: span 4;
       order: 3;
     }
+
+    .blog-column-2 {
+      grid-column: span 4;
+      order: 1;
+    }
     
     .column-3 {
       grid-column: span 4;
       order: 4;
+    }
+
+    .blog-column-3 {
+      grid-column: span 4;
+      order: 3;
     }
     
     .column-4 {
@@ -54,6 +68,7 @@
       grid-column: span 4;
       order: 2;
     }
+
   }
 
   // Desktop: 12-column grid, each column spans 4
@@ -79,5 +94,25 @@
       grid-column: span 4;
       width: auto;
     }
+
   }
+
+   @media (min-width: 1025px) {
+    grid-template-columns: repeat(12, 1fr);
+
+        .blog-column-1 {
+      grid-column: span 4;
+      order: 1;
+    }
+    .blog-column-2 {
+      grid-column: span 4;
+      order: 2;
+    }
+    
+    .blog-column-3 {
+      grid-column: span 4;
+      order: 3;
+    }
+
+   }
 }

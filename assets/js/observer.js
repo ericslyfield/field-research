@@ -3,7 +3,7 @@ const translateElementsOnScroll = (entries, observer) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
         // Add a data attribute for the delay
-        entry.target.style.transitionDelay = `${index * 0.2}s`;
+        entry.target.style.transitionDelay = `${index * 0.3}s`;
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }

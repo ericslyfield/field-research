@@ -1,0 +1,11 @@
+// Mobile: stacked layout
+@media (max-width: 767px) {
+    .hide-on-mobile {
+        display: none !important;
+        transition: ease-in-out;
+    }
+
+    .reverse-on-mobile {
+        flex-direction: column-reverse;
+    }
+}

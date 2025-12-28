@@ -106,6 +106,10 @@ select{
 	font: inherit;
 }
 
+:where(.is-layout-grid) {
+	gap:0px
+}
+
 /* Animation Accessibility */
 
 @media (prefers-reduced-motion: reduce) {

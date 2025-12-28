@@ -12,3 +12,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once get_template_directory() . '/autoloader.php';
 
 new FieldResearch\Styles\Styles(); 
+
+new FieldResearch\Utilities\Pagination(); 
