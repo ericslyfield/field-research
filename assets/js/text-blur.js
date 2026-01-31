@@ -1,31 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const blurElements = document.querySelectorAll('.has-blur-effect');
     let timer;
-    const blurElement = document.querySelector('.has-blur-effect');
     const DELAY = 2000;
     let isMouseMoving = false;
     
-    // Function to wrap text nodes in spans
     function wrapTextNodes(element) {
         const childNodes = Array.from(element.childNodes);
         childNodes.forEach(node => {
-            // Only process text nodes that aren't empty spaces
+            // Skip links and elements, only wrap text nodes
             if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== '') {
                 const span = document.createElement('span');
+                span.className = 'blur-target';
                 span.textContent = node.nodeValue;
                 node.replaceWith(span);
+            }
+            // Recursively wrap text in child elements (like <em>) but skip <a>
+            else if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'A') {
+                wrapTextNodes(node);
             }
         });
     }
     
-    // Wrap text nodes on load
-    if (blurElement) {
-        wrapTextNodes(blurElement);
-    }
+    blurElements.forEach(element => {
+        wrapTextNodes(element);
+    });
     
     function startBlurTimer() {
         clearTimeout(timer);
         isMouseMoving = true;
-        blurElement.classList.remove('is-blurred');
+        blurElements.forEach(el => el.classList.remove('is-blurred'));
         
         setTimeout(() => {
             isMouseMoving = false;
@@ -33,18 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         timer = setTimeout(() => {
             if (!isMouseMoving) {
-                blurElement.classList.add('is-blurred');
+                blurElements.forEach(el => el.classList.add('is-blurred'));
             }
         }, DELAY);
     }
 
-    let lastMove = 0;
     document.addEventListener('mousemove', () => {
-        const now = Date.now();
-        if (now - lastMove > 100) {
-            lastMove = now;
-            startBlurTimer();
-        }
+        startBlurTimer();
     });
     
     startBlurTimer();
