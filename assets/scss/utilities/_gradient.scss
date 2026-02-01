@@ -10,21 +10,21 @@
     margin: 0;
     width: 5%;
     pointer-events: visible;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-in-out;
     z-index: 1;
   }
   
   &::before {
     left: -1px;
     width: calc(5% + 1px);
-    background: linear-gradient(to right, var(--wp--preset--color--pine), transparent);
+    background: linear-gradient(to right, var(--wp--preset--color--sand), transparent);
     opacity: 1;
   }
   
   &::after {
     right: -1px;
     width: calc(5% + 1px);
-    background: linear-gradient(to left, var(--wp--preset--color--pine), transparent);
+    background: linear-gradient(to left, var(--wp--preset--color--sand), transparent);
     opacity: 1;
   }
   
