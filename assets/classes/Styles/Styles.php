@@ -55,6 +55,14 @@ class Styles {
         true
         );
 
+        // Text Blur
+        $this->register_script( 
+            'fieldresearch-text-blur', 
+            '/assets/js/text-blur.js',
+            [ 'jquery' ],
+        true
+        );
+
         // Global Scripts
         $this->register_script( 
             'fieldresearch-observer', 
@@ -63,6 +71,7 @@ class Styles {
             true
         );
         
+    wp_enqueue_script( 'fieldresearch-text-blur' );
     wp_enqueue_script( 'fieldresearch-scripts' );
     wp_enqueue_script( 'fieldresearch-carousel' );
     wp_enqueue_script( 'fieldresearch-observer' );
