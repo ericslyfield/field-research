@@ -13,4 +13,5 @@ require_once get_template_directory() . '/autoloader.php';
 
 new FieldResearch\Styles\Styles(); 
 
-new FieldResearch\Utilities\Pagination(); 
+new FieldResearch\Utilities\Index(); 
+new FieldResearch\Utilities\Pagination();
