@@ -1,149 +1,209 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 3,
-  "styles":{
-    "css": "--bg-color: var(--wp--preset--color--sand);"
-  },
-	"settings": {
-		"appearanceTools": true,
-        "blocks": {
-            "core/image" :{
-                "lightbox": {
-                    "enabled": true,
-                    "allowEditing": true
-                }
-            },
-            "core/cover" :{
-                "lightbox": {
-                    "enabled": false,
-                    "allowEditing": false
-                }
-            }
+  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+  "version": 3,
+  "name": "Field Research",
+  "templateParts": [
+    {
+      "title": "Header",
+      "name": "header",
+      "area": "header"
+    },
+    {
+      "title": "Footer",
+      "name": "footer",
+      "area": "footer"
+    },
+    {
+      "title": "Sidebar",
+      "name": "sidebar",
+      "area": "uncategorized"
+    }
+  ],
+  "settings": {
+    "appearanceTools": true,
+    "blocks": {
+      "core/cover": {
+        "lightbox": {
+          "allowEditing": false,
+          "enabled": false
+        }
+      },
+      "core/image": {
+        "lightbox": {
+          "allowEditing": true,
+          "enabled": true
+        }
+      }
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
+    },
+    "color": {
+      "background": true,
+      "caption": true,
+      "custom": true,
+      "customGradient": true,
+      "defaultDuotone": true,
+      "defaultGradients": true,
+      "defaultPalette": false,
+      "link": true,
+      "palette": [
+        {
+          "color": "#ffffff",
+          "name": "Base",
+          "slug": "base"
         },
-        "border": {
-            "color" :true,
-            "radius": true,
-            "style": true,
-            "width": true
+        {
+          "color": "#000000",
+          "name": "Contrast",
+          "slug": "contrast"
         },
-        "color": {
-            "link": true,
-            "caption": true,
-            "background": true,
-            "custom": true,
-            "customGradient": false,
-            "defaultDuotone": false,
-			"defaultGradients": false,
-			"defaultPalette": false,
-            "palette": [
-                {
-                    "color": "#ffffff",
-                    "name": "Base",
-                    "slug": "base"
-                },
-                {
-                    "color": "#000000",
-                    "name": "Contrast",
-                    "slug": "contrast"
-                },
-                {
-                    "color": "#144611",
-                    "name": "Primary",
-                    "slug": "primary"
-                },
-                {
-                    "color": "#faf6ed",
-                    "name": "Sand",
-                    "slug": "sand"
-                },
-                {
-                    "color": "#333333",
-                    "name": "Slate",
-                    "slug": "slate"
-                },
-                {
-                    "color": "#467061",
-                    "name": "Pine",
-                    "slug": "pine"
-                }
-            ]
-	},
+        {
+          "color": "#faf6ed",
+          "name": "Sand",
+          "slug": "sand"
+        },
+        {
+          "color": "#333333",
+          "name": "Slate",
+          "slug": "slate"
+        },
+        {
+          "color": "#144611",
+          "name": "Pine",
+          "slug": "pine"
+        },
+          {
+          "color": "#dedada",
+          "name": "Greyish",
+          "slug": "greyish"
+        }
+      ]
+    },
     "layout": {
-        "contentSize": "55rem",
-        "wideSize": "80rem"
+      "contentSize": "75vw",
+      "wideSize": "80vw"
     },
     "spacing": {
-        "customSpacingSize": false
+      "blockGap": true,
+      "customSpacingSize": true,
+      "spacingScale": {
+        "increment": 1.414,
+        "mediumStep": 1.5,
+        "operator": "*",
+        "steps": 7,
+        "unit": "rem"
+      }
     },
     "typography": {
-        "customFontSize": false,
-        "fontWeight": false,
-        "textColumns": true,
-        "textDecoration": true,
-        "writingMode": true,
-        "fluid": false,
-        "fontFamilies": [
+      "customFontSize": true,
+      "fluid": true,
+      "fontFamilies": [
         {
-          "name": "Shippori Antique B1",
-          "slug": "shippori-antique-b1",
-          "fontFamily": "\"Shippori Antique B1\", sans-serif",
           "fontFace": [
             {
+              "fontFamily": "\"Shippori Antique B1\"",
+              "fontStyle": "normal",
+              "fontWeight": "400",
               "src": [
                 "file:./assets/fonts/shippori-antique-b1/shippori-antique-b1-400-normal.woff2"
-              ],
-              "fontWeight": "400",
-              "fontStyle": "normal",
-              "fontFamily": "\"Shippori Antique B1\""
+              ]
             }
-          ]
+          ],
+          "fontFamily": "\"Shippori Antique B1\", sans-serif",
+          "name": "Shippori Antique B1",
+          "slug": "shippori-antique-b1"
         },
         {
-          "name": "PT Serif",
-          "slug": "pt-serif",
-          "fontFamily": "\"PT Serif\", serif",
           "fontFace": [
             {
-              "src": [
-                "file:./assets/fonts/pt-serif/pt-serif-400-normal.woff2"
-              ],
-              "fontWeight": "400",
+              "fontFamily": "\"Rubik\"",
               "fontStyle": "normal",
-              "fontFamily": "\"PT Serif\""
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/rubik/rubik-v31-latin-regular.woff2"
+              ]
             },
             {
-              "src": [
-                "file:./assets/fonts/pt-serif/pt-serif-400-italic.woff2"
-              ],
-              "fontWeight": "400",
+              "fontFamily": "\"Rubik\"",
               "fontStyle": "italic",
-              "fontFamily": "\"PT Serif\""
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/rubik/rubik-v31-latin-italic.woff2"
+              ]
+            },
+            {
+              "fontFamily": "\"Rubik\"",
+              "fontStyle": "normal",
+              "fontWeight": "300",
+              "src": [
+                "file:./assets/fonts/rubik/rubik-v31-latin-300.woff2"
+              ]
+            },
+            {
+              "fontFamily": "\"Rubik\"",
+              "fontStyle": "italic",
+              "fontWeight": "300",
+              "src": [
+                "file:./assets/fonts/rubik/rubik-v31-latin-300italic.woff2"
+              ]
             }
-          ]
-        }
-    ],
-    "fontSizes": [
+          ],
+          "fontFamily": "\"Rubik\", sans-serif",
+          "name": "Rubik",
+          "slug": "rubik"
+        },
         {
-					"name": "Small",
-					"slug": "small",
-					"size": "13px"
-				},
-				{
-					"name": "Medium",
-					"slug": "medium",
-					"size": "20px"
-				},
-				{
-					"name": "Large",
-					"slug": "large",
-					"size": "36px"
-				},
-				{
-					"name": "Extra Large",
-					"slug": "x-large",
-					"size": "42px"
-				}
-    ]
-}
-}
+          "fontFace": [
+            {
+              "fontFamily": "\"Libertinus Mono\"",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/libertinus-mono/libertinus-mono-v1-latin-regular.woff2"
+              ]
+            }
+          ],
+          "fontFamily": "\"Libertinus Mono\", sans-serif",
+          "name": "Libertinus Mono",
+          "slug": "libertinus-mono"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "size": "12px",
+          "slug": "small"
+        },
+        {
+          "name": "Medium",
+          "size": "20px",
+          "slug": "medium"
+        },
+        {
+          "name": "Large",
+          "size": "36px",
+          "slug": "large"
+        },
+        {
+          "name": "Extra Large",
+          "size": "42px",
+          "slug": "x-large"
+        }
+      ],
+      "fontWeight": true,
+      "textColumns": true,
+      "textDecoration": true,
+      "writingMode": true
+    }
+  },
+  "styles": {
+    "css": "--bg-color: var(--wp--preset--color--sand);",
+    "spacing": {
+      "blockGap": "1rem"
+    }
+  }
 }
