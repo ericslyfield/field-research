@@ -47,6 +47,14 @@ class Styles {
             true
         );
 
+        // Tailwind CSS
+        $this->register_script( 
+            'fieldresearch-tailwindcss', 
+            '/src/output.css',
+            [ 'jquery' ],
+            true
+        );
+
         // Image Carousel
         $this->register_script( 
             'fieldresearch-carousel', 
@@ -70,12 +78,24 @@ class Styles {
             [ 'jquery' ],
             true
         );
+
+        // Global Scripts
+        $this->register_script( 
+            'fieldresearch-filter', 
+            '/assets/js/filter-results.js',
+            [ 'jquery' ],
+            true
+        );
         
+    wp_enqueue_script( 'fieldresearch-filter' );
+    wp_enqueue_script( 'fieldresearch-tailwindcss' );
     wp_enqueue_script( 'fieldresearch-text-blur' );
     wp_enqueue_script( 'fieldresearch-scripts' );
     wp_enqueue_script( 'fieldresearch-carousel' );
     wp_enqueue_script( 'fieldresearch-observer' );
     }
+
+
     private function register_style( $handle, $path ) {
         $url = get_template_directory_uri() . $path;
         wp_register_style( $handle, $url, [], null, 'all' );

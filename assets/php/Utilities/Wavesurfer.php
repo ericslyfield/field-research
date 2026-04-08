@@ -12,11 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+class Wavesurfer {
 
-class Wavesurfer{
-
+    public function __construct() {
 add_action('admin_footer', function() {
-    if (get_current_screen()->is_block_editor()) {
+    $screen = get_current_screen();
+    if ( $screen && $screen->is_block_editor() ) {
         ?>
         <script>
         console.log('Force loading check - WaveSurfer:', typeof WaveSurfer);
@@ -24,7 +25,7 @@ add_action('admin_footer', function() {
         <?php
     }
 });
+    }
 
 }
-
 // end.
