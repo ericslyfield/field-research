@@ -1,209 +1,500 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
-  "version": 3,
-  "name": "Field Research",
-  "templateParts": [
-    {
-      "title": "Header",
-      "name": "header",
-      "area": "header"
-    },
-    {
-      "title": "Footer",
-      "name": "footer",
-      "area": "footer"
-    },
-    {
-      "title": "Sidebar",
-      "name": "sidebar",
-      "area": "uncategorized"
-    }
-  ],
-  "settings": {
-    "appearanceTools": true,
-    "blocks": {
-      "core/cover": {
-        "lightbox": {
-          "allowEditing": false,
-          "enabled": false
-        }
-      },
-      "core/image": {
-        "lightbox": {
-          "allowEditing": true,
-          "enabled": true
-        }
-      }
-    },
-    "border": {
-      "color": true,
-      "radius": true,
-      "style": true,
-      "width": true
-    },
-    "color": {
-      "background": true,
-      "caption": true,
-      "custom": true,
-      "customGradient": true,
-      "defaultDuotone": true,
-      "defaultGradients": true,
-      "defaultPalette": false,
-      "link": true,
-      "palette": [
-        {
-          "color": "#ffffff",
-          "name": "Base",
-          "slug": "base"
-        },
-        {
-          "color": "#000000",
-          "name": "Contrast",
-          "slug": "contrast"
-        },
-        {
-          "color": "#faf6ed",
-          "name": "Sand",
-          "slug": "sand"
-        },
-        {
-          "color": "#333333",
-          "name": "Slate",
-          "slug": "slate"
-        },
-        {
-          "color": "#144611",
-          "name": "Pine",
-          "slug": "pine"
-        },
-          {
-          "color": "#dedada",
-          "name": "Greyish",
-          "slug": "greyish"
-        }
-      ]
-    },
-    "layout": {
-      "contentSize": "75vw",
-      "wideSize": "80vw"
-    },
-    "spacing": {
-      "blockGap": true,
-      "customSpacingSize": true,
-      "spacingScale": {
-        "increment": 1.414,
-        "mediumStep": 1.5,
-        "operator": "*",
-        "steps": 7,
-        "unit": "rem"
-      }
-    },
-    "typography": {
-      "customFontSize": true,
-      "fluid": true,
-      "fontFamilies": [
-        {
-          "fontFace": [
-            {
-              "fontFamily": "\"Shippori Antique B1\"",
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "src": [
-                "file:./assets/fonts/shippori-antique-b1/shippori-antique-b1-400-normal.woff2"
-              ]
-            }
-          ],
-          "fontFamily": "\"Shippori Antique B1\", sans-serif",
-          "name": "Shippori Antique B1",
-          "slug": "shippori-antique-b1"
-        },
-        {
-          "fontFace": [
-            {
-              "fontFamily": "\"Rubik\"",
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "src": [
-                "file:./assets/fonts/rubik/rubik-v31-latin-regular.woff2"
-              ]
+    "$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+    "version": 3,
+    "settings": {
+        "appearanceTools": true,
+        "blocks": {
+            "core/cover": {
+                "lightbox": {
+                    "allowEditing": false,
+                    "enabled": false
+                }
             },
-            {
-              "fontFamily": "\"Rubik\"",
-              "fontStyle": "italic",
-              "fontWeight": "400",
-              "src": [
-                "file:./assets/fonts/rubik/rubik-v31-latin-italic.woff2"
-              ]
-            },
-            {
-              "fontFamily": "\"Rubik\"",
-              "fontStyle": "normal",
-              "fontWeight": "300",
-              "src": [
-                "file:./assets/fonts/rubik/rubik-v31-latin-300.woff2"
-              ]
-            },
-            {
-              "fontFamily": "\"Rubik\"",
-              "fontStyle": "italic",
-              "fontWeight": "300",
-              "src": [
-                "file:./assets/fonts/rubik/rubik-v31-latin-300italic.woff2"
-              ]
+            "core/image": {
+                "lightbox": {
+                    "allowEditing": true,
+                    "enabled": true
+                }
             }
-          ],
-          "fontFamily": "\"Rubik\", sans-serif",
-          "name": "Rubik",
-          "slug": "rubik"
         },
-        {
-          "fontFace": [
-            {
-              "fontFamily": "\"Libertinus Mono\"",
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "src": [
-                "file:./assets/fonts/libertinus-mono/libertinus-mono-v1-latin-regular.woff2"
-              ]
+        "color": {
+            "background": true,
+            "custom": true,
+            "customGradient": false,
+            "defaultDuotone": false,
+            "defaultGradients": true,
+            "defaultPalette": false,
+            "palette": [
+                {
+                    "color": "#FFFFFF",
+                    "name": "Base",
+                    "slug": "base"
+                },
+                {
+                    "color": "#111111",
+                    "name": "Contrast",
+                    "slug": "contrast"
+                },
+                {
+                    "color": "#FAF6ED",
+                    "name": "Sand",
+                    "slug": "sand"
+                },
+                {
+                    "color": "#333333",
+                    "name": "Slate Grey",
+                    "slug": "slate"
+                },
+                {
+                    "color": "#144611",
+                    "name": "Pine Green",
+                    "slug": "pine"
+                },
+                {
+                    "color": "#EB3425",
+                    "name": "Echo Red",
+                    "slug": "echo-red"
+                },
+                {
+                    "color": "#DEDADA",
+                    "name": "Greyish",
+                    "slug": "greyish"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "75vw",
+            "wideSize": "80vw"
+        },
+        "spacing": {
+            "customSpacingSize": true,
+            "spacingScale": {
+                "theme": {
+                    "increment": 1.4139999999999999,
+                    "mediumStep": 1.5,
+                    "operator": "*",
+                    "steps": 7,
+                    "unit": "rem"
+                }
+            },
+            "spacingSizes": [
+                {
+                    "name": "2X-Small",
+                    "size": "0.53rem",
+                    "slug": "20"
+                },
+                {
+                    "name": "X-Small",
+                    "size": "0.75rem",
+                    "slug": "30"
+                },
+                {
+                    "name": "Small",
+                    "size": "1.06rem",
+                    "slug": "40"
+                },
+                {
+                    "name": "Medium",
+                    "size": "1.5rem",
+                    "slug": "50"
+                },
+                {
+                    "name": "Large",
+                    "size": "2.12rem",
+                    "slug": "60"
+                },
+                {
+                    "name": "X-Large",
+                    "size": "3rem",
+                    "slug": "70"
+                },
+                {
+                    "name": "2X-Large",
+                    "size": "4.24rem",
+                    "slug": "80"
+                }
+            ]
+        },
+        "typography": {
+            "customFontSize": true,
+            "fluid": true,
+            "fontFamilies": [
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "\"Shippori Antique B1\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/shippori-antique-b1/shippori-antique-b1-400-normal.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "\"Shippori Antique B1\", Arial, Helvetica, sans-serif",
+                    "name": "Shippori Antique B1",
+                    "slug": "shippori-antique-b1"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "\"Libertinus Mono\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/libertinus-mono/libertinus-mono-400-normal.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "\"Libertinus Mono\", monospace",
+                    "name": "Libertinus Mono",
+                    "slug": "libertinus-mono"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "\"Libre Baskerville\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/libre-baskerville/libre-baskerville-400-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "\"Libre Baskerville\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/libre-baskerville/libre-baskerville-700-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "\"Libre Baskerville\"",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/libre-baskerville/libre-baskerville-400-italic.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "\"Libre Baskerville\", serif",
+                    "name": "Libre Baskerville",
+                    "slug": "libre-baskerville"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-400-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "normal",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-600-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "normal",
+                            "fontWeight": "800",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-800-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-400-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "normal",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-300-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "italic",
+                            "fontWeight": "300",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-300-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "italic",
+                            "fontWeight": "600",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-600-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Rubik",
+                            "fontStyle": "italic",
+                            "fontWeight": "800",
+                            "src": [
+                                "file:./assets/fonts/rubik/rubik-800-italic.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "Rubik, sans-serif",
+                    "name": "Rubik",
+                    "slug": "rubik"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "Arvo",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/arvo/arvo-400-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Arvo",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/arvo/arvo-700-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Arvo",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/arvo/arvo-400-italic.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Arvo",
+                            "fontStyle": "italic",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/arvo/arvo-700-italic.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "Arvo, serif",
+                    "name": "Arvo",
+                    "slug": "arvo"
+                },
+                {
+                    "fontFace": [
+                        {
+                            "fontFamily": "\"Old Standard TT\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/old-standard-tt/old-standard-tt-400-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "\"Old Standard TT\"",
+                            "fontStyle": "normal",
+                            "fontWeight": "700",
+                            "src": [
+                                "file:./assets/fonts/old-standard-tt/old-standard-tt-700-normal.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "\"Old Standard TT\"",
+                            "fontStyle": "italic",
+                            "fontWeight": "400",
+                            "src": [
+                                "file:./assets/fonts/old-standard-tt/old-standard-tt-400-italic.woff2"
+                            ]
+                        }
+                    ],
+                    "fontFamily": "\"Old Standard TT\", serif",
+                    "name": "Old Standard TT",
+                    "slug": "old-standard-tt"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "fluid": false,
+                    "name": "Extra Small",
+                    "size": "12px",
+                    "slug": "x-small"
+                },
+                {
+                    "fluid": {
+                        "max": "18px",
+                        "min": "16px"
+                    },
+                    "name": "Small",
+                    "size": "18px",
+                    "slug": "small"
+                },
+                {
+                    "fluid": {
+                        "max": "24px",
+                        "min": "18px"
+                    },
+                    "name": "Medium",
+                    "size": "24px",
+                    "slug": "medium"
+                },
+                {
+                    "fluid": {
+                        "max": "36px",
+                        "min": "24px"
+                    },
+                    "name": "Large",
+                    "size": "36px",
+                    "slug": "large"
+                },
+                {
+                    "fluid": {
+                        "max": "42px",
+                        "min": "28px"
+                    },
+                    "name": "Extra Large",
+                    "size": "42px",
+                    "slug": "x-large"
+                }
+            ],
+            "fontWeight": true,
+            "textDecoration": true,
+            "writingMode": true
+        }
+    },
+    "styles": {
+        "blocks": {
+            "core/image": {
+                "elements": {
+                    "caption": {
+                        "spacing": {
+                            "padding": {
+                                "bottom": "1em",
+                                "top": "1em"
+                            }
+                        }
+                    }
+                }
+            },
+            "core/quote": {
+                "color": {
+                    "text": "var(--wp--preset--color--echo-red)"
+                },
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--libertinus-mono)",
+                    "fontSize": "var(--wp--preset--font-size--medium)",
+                    "fontStyle": "normal",
+                    "fontWeight": "400",
+                    "lineHeight": "1"
+                },
+                "spacing": {
+                    "margin": {
+                        "top": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "right": "0"
+                    },
+                    "padding": {
+                        "top": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "right": "0"
+                    }
+                }
+            },
+            "core/separator": {
+                "color": {
+                    "background": "var(--wp--preset--color--greyish)"
+                }
             }
-          ],
-          "fontFamily": "\"Libertinus Mono\", sans-serif",
-          "name": "Libertinus Mono",
-          "slug": "libertinus-mono"
+        },
+        "color": {
+            "background": "var(--wp--preset--color--sand)",
+            "text": "var(--wp--preset--color--contrast)"
+        },
+        "elements": {
+            "button": {
+                "color": {
+                    "background": "var(--wp--preset--color--sand)"
+                }
+            },
+            "caption": {
+                "color": {
+                    "text": "#d90000"
+                },
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--libertinus-mono)",
+                    "fontSize": "var(--wp--preset--font-size--small)"
+                }
+            },
+            "heading": {
+                "color": {
+                    "text": "var(--wp--preset--color--slate)"
+                },
+                "typography": {
+                    "fontStyle": "normal",
+                    "fontWeight": "400"
+                }
+            },
+            "link": {
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--pine)"
+                    }
+                },
+                "color": {
+                    "text": "var(--wp--preset--color--contrast)"
+                },
+                "typography": {
+                    "textDecoration": "underline"
+                }
+            }
+        },
+        "spacing": {
+            "blockGap": "2.5em",
+            "padding": {
+                "bottom": "0px",
+                "left": "0px",
+                "right": "0px",
+                "top": "0px"
+            }
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--shippori-antique-b-1)",
+            "fontSize": "var(--wp--preset--font-size--medium)",
+            "fontWeight": "400",
+            "lineHeight": "1"
         }
-      ],
-      "fontSizes": [
+    },
+    "templateParts": [
         {
-          "name": "Small",
-          "size": "12px",
-          "slug": "small"
+            "area": "header",
+            "name": "header",
+            "title": "Header"
         },
         {
-          "name": "Medium",
-          "size": "20px",
-          "slug": "medium"
+            "area": "body",
+            "name": "body",
+            "title": "Body"
         },
         {
-          "name": "Large",
-          "size": "36px",
-          "slug": "large"
+            "area": "footer",
+            "name": "footer",
+            "title": "Footer"
         },
         {
-          "name": "Extra Large",
-          "size": "42px",
-          "slug": "x-large"
+            "area": "sidebar",
+            "name": "sidebar",
+            "title": "Sidebar"
         }
-      ],
-      "fontWeight": true,
-      "textColumns": true,
-      "textDecoration": true,
-      "writingMode": true
-    }
-  },
-  "styles": {
-    "css": "--bg-color: var(--wp--preset--color--sand);",
-    "spacing": {
-      "blockGap": "1rem"
-    }
-  }
+    ]
 }
