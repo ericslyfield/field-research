@@ -19,7 +19,7 @@ spl_autoload_register( function( $class ) {
     $relative_class = substr( $class, strlen( $namespace ) );
     
     // Convert namespace separators to directory separators
-    $file = __DIR__ . '/assets/classes/' . str_replace( '\\', '/', $relative_class ) . '.php';
+    $file = __DIR__ . '/assets/php/' . str_replace( '\\', '/', $relative_class ) . '.php';
     
     if ( file_exists( $file ) ) {
         require $file;
