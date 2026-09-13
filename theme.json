@@ -69,14 +69,12 @@
         "spacing": {
             "customSpacingSize": true,
             "spacingScale": {
-                "theme": {
                     "increment": 1.4139999999999999,
                     "mediumStep": 1.5,
                     "operator": "*",
                     "steps": 7,
                     "unit": "rem"
-                }
-            },
+                },
             "spacingSizes": [
                 {
                     "name": "2X-Small",
