@@ -1,31 +1,43 @@
-// Callback function for elements translating into view
 const translateElementsOnScroll = (entries, observer) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        // Add a data attribute for the delay
-        entry.target.style.transitionDelay = `${index * 0.3}s`;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-  
-  // Options for the IntersectionObserver
-  const observerOptions = {
-    threshold: 0.3
-  };
-  
-  // Create an IntersectionObserver instance
-  const observer = new IntersectionObserver(translateElementsOnScroll, observerOptions);
-  
-  // Target all elements with the 'translate-up' class
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      entry.target.style.transitionDelay = `${index * 0.3}s`;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(translateElementsOnScroll, {
+  threshold: 0.125
+});
+
+function initObserver() {
   const elementsToObserve = document.querySelectorAll('.translate-up');
-  
-  // Start observing the elements
-  elementsToObserve.forEach((element, index) => {
-    // Reset transition delay when scrolled out of view
+  elementsToObserve.forEach((element) => {
     element.addEventListener('transitionend', () => {
       element.style.transitionDelay = '0s';
     });
     observer.observe(element);
   });
+}
+
+initObserver();
+
+// Re-initialize after cross-document view transitions
+window.addEventListener('pagereveal', () => initObserver());
+
+// --- Column header fade-out in bottom 20% of page ---
+const columnHeaders = document.querySelectorAll('.column-header');
+
+const handleColumnHeaderVisibility = () => {
+  const scrollBottom = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+  const inBottomZone = scrollBottom >= pageHeight * 0.8;
+
+  columnHeaders.forEach(el => el.classList.toggle('faded-out', inBottomZone));
+};
+
+window.addEventListener('scroll', handleColumnHeaderVisibility, { passive: true });
+handleColumnHeaderVisibility(); // Run on load in case page is short
+
